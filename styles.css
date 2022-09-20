@@ -1,0 +1,45 @@
+header{
+    background-image:url("https://mir-s3-cdn-cf.behance.net/fa6047ccfae4e7df156982fbd57dcb9c/439457b7-7b60-4f5b-8fc9-60f9a6ed45a4_rwc_-2x660x3437x367x3437.jpg?h=16a7c20d54787d09fc2bd42ef973f91a")
+
+}
+
+#header{
+    display: flex;
+    justify-content:space-around;
+    height: 30px;
+   
+}
+
+.cajaCentral{
+    display: flex;
+    background-color: azure;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100px;
+
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto au;
+    background-color: #2196F3;
+    padding: 10px;
+  }
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
+  @media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+
+    .1{
+        
+    }
+    
+  }
