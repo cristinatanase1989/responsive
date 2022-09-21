@@ -33,13 +33,96 @@ header{
     font-size: 30px;
     text-align: center;
   }
-  @media only screen and (max-width: 600px) {
+  
+  .cajaCentral{
+    display:inline-block;
+    justify-content: space-between;
+    text-align: left;
+    border-block: 50px;
+  }
+
+  div.fotos{
+    display: flex;
+    flex-direction: column;
+    gap:0.5rem; /*para la separacion entre fotos */
+  }
+  
+
+  div.fotos div img{
+
+    width:200px;
+    height:200px;
+
+  }
+
+
+
+  /* 
+  VERSION DESKTOP
+  */
+  @media only screen and (min-width: 600px) {
     body {
       background-color: lightblue;
-    }
+      display: grid;
+      min-height: 100vh;
+      grid-template-rows: 30rem 1fr;
+      grid-template-columns: 30rem 1fr;
+      grid-template-areas: 
+        "header header "
+        "aside fotos";/*  este todo es para la aerea general y ahora cortarla*/
 
-    .1{
-        
+
     }
     
+    body>header{
+      grid-area: header;
+    }
+    body>header>div{
+      display: flex;
+      justify-content: space-around;
+      background-color: rgba(0,0,0,0.2);
+      
+    }
+    body>header>div>nav{
+      display:flex;
+      gap:2rem;
+      
+      
+
+    }
+    body>header>div>nav>div>a{
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    /*  los botones en color azul*/
+    div>button{
+      background-color: blue;
+      border-radius: 25px;
+      color:white;
+    }
+
+    aside.aside{
+
+      grid-area:aside;
+      display: flex;
+      flex-direction: column;
+
+    }
+
+   div.fotos{
+    grid-area: fotos;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    flex-direction: row;
+
+   
+    }
+    div.fotos div img{
+      width: 200px;
+      height: 200px;
+    }
   }
